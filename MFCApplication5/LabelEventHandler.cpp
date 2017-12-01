@@ -31,21 +31,7 @@ bool CLabelEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActi
 	{
 		if (ea.getEventType() == ea.MOVE || ea.getEventType() == ea.DRAG)
 		{
-
-			//osgUtil::LineSegmentIntersector::Intersections result;
-			//bool flag = viewer->computeIntersections(ea.getX(), ea.getY(), m_NodePath, result);
-			//if (flag)
 			{
-				/*osgUtil::LineSegmentIntersector::Intersection first = *(result.begin());
-				osg::Vec3d point = first.getWorldIntersectPoint();
-
-				osgEarth::GeoPoint mapPoint;
-				mapPoint.fromWorld(m_MapNode->getMapSRS()->getGeodeticSRS(), point);
-
-				//	osgEarth::GeoPoint vp = m_MapNode->getMapSRS().focalPoint().get();
-				char buff[512] = { 0 };
-				sprintf_s(buff, sizeof(buff), "mouse:jing:%.6f wei:%.6f heigh:%.2f", mapPoint.x(), mapPoint.y(), mapPoint.z());
-				m_MouseLabel->setText(buff);*/
 				float local_x, local_y = 0.0;
 				const osg::Camera* camera = viewer->getCameraContainingPosition(ea.getX(), ea.getY(), local_x, local_y);
 				if (!camera) camera = viewer->getCamera();
