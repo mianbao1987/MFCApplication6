@@ -31,6 +31,7 @@ bool CLabelEventHandler::handle(const osgGA::GUIEventAdapter& ea, osgGA::GUIActi
 	{
 		if (ea.getEventType() == ea.MOVE || ea.getEventType() == ea.DRAG)
 		{
+			//test asddasfasdfdas
 			{
 				float local_x, local_y = 0.0;
 				const osg::Camera* camera = viewer->getCameraContainingPosition(ea.getX(), ea.getY(), local_x, local_y);
